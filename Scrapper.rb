@@ -6,8 +6,10 @@ require 'csv'
 
 
 search = 0
+puts "Enter the Search String"
+get_search = gets
 while search <=50 do
-slink = "https://www.google.com/search?q=linkedin+ARM+VLSI+profile&start=#{search}&sa=N"
+slink = "https://www.google.com/search?q=#{get_search}+profile&start=#{search}&sa=N"
 
 page = HTTParty.get(slink)
 search+=10
